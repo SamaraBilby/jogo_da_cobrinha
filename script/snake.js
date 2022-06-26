@@ -53,13 +53,13 @@ let snake = (function(){
         return selfCollision;
     };
 
-    function getsquareColilision(){
+    function getSquareColilision(){
         return squareCollision;
     };
 
     function draw (){
         for (let i = 0; i < leng; i++){
-            ctx.strokeStyle = '#FFFFFF';
+            ctx.strokeStyle = '#C24C82';
             ctx.fillStyle = i == leng - 1 ? "#CC0033" : "#000000";
             ctx.beginPath();
             ctx.lineWidth = 2;
@@ -120,13 +120,13 @@ let snake = (function(){
         setLeng : setLeng,
         setCtx : setCtx,
         setBody : setBody,
-        setSquareCollision : setSelfCollision,
+        setSquareCollision : setSquareCollision,
         setSelfCollision : setSelfCollision,
         getLeng : getLeng,
         getBody : getBody,
         getLastDirection : getLastDirection,
         getSelfCollision : getSelfCollision,
-        getsquareColilision : getsquareColilision,
+        getSquareColilision : getSquareColilision,
         draw : draw,
         move : move,
         grow : grow
