@@ -68,6 +68,68 @@ let snake = (function(){
 
             ctx.closePath();
         };
+
     };
-    
-})
+
+    function move() {
+        let cX = body[ leng - 1].x;
+        let cY = body[leng - 1].y;
+
+        switch(direction) {
+            case 1: // para cima
+                cY --;
+                break;
+            case 2: // para baixo
+                cY ++;
+                break;
+            case 3: // direita
+                cX ++;
+                break;
+            case 4: //esquerda
+                cX --;
+                break;
+        }
+
+        lastDirection = direction;
+        
+        for(let i = 0; i < leng - 1; i++) {
+            body[i].x = body[i + 1].x;
+            body[i].y = body[i + 1].y;
+
+            if(body[i + 1].x == cX && body[i + 1].y == cY){
+                selfCollision = true;
+            }
+
+            if(body[leng - 1].x == square.getX() && body[leng - 1].y == square.getY()) {
+                squareCollision = true;
+            }    
+        }
+
+        body[leng - 1].x = cX;
+        body[leng - 1].y = cY;
+    }
+
+    function grow (sx, sy) {
+        body.unshift({x : sx, y : sy})
+        leng += 1;
+    }
+
+    return{
+        setSize : setSize,
+        setDirection : setDirection,
+        setLeng : setLeng,
+        setCtx : setCtx,
+        setBody : setBody,
+        setSquareCollision : setSelfCollision,
+        setSelfCollision : setSelfCollision,
+        getLeng : getLeng,
+        getBody : getBody,
+        getLastDirection : getLastDirection,
+        getSelfCollision : getSelfCollision,
+        getsquareColilision : getsquareColilision,
+        draw : draw,
+        move : move,
+        grow : grow
+    }
+
+}())

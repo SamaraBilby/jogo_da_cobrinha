@@ -35,10 +35,29 @@ var squere = (function(){
         ctx.closePath()
     }
 
+    function squarePosition() {
+        let isDraw =true;
+
+        while(isDraw == true) {
+            isDraw = false;
+            x = parseInt(Math.random() * (canvas.W / size));
+            y = parseInt(Math.random() * (canvas.H / size));
+
+            for(let i = 0; i < snake.getLeng(); i++ ) {
+                if(snake.getBody()[i].x == x && snake.getBody()[i].y == y){
+                    isDraw = true;
+                };
+            };
+        };
+    };
+
+
+
     return {
         setCtx : setCtx,
         setSize : setSize,
-        SetCanvas : setCanvas,
+        setCanvas : setCanvas,
+        squarePosition : squarePosition,
         draw : draw,
         getX : getX,
         getY : getY
