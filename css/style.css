@@ -25,9 +25,25 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 0.2rem;
     padding-left: 0.5rem;
+
+    margin-bottom: 0;
 }
 
+#container h5 input {
+    
+    height: 0.5rem;
+    width: 2.5rem;
+    border: 1px solid #9049AC;
+    border-radius: 15%;
+    
+    padding: 0.5rem;
+    margin-left: 00.5rem;
+    font-weight: bolder;
+}
+
+
 #divCanvas{
+
     
     float: center;
     text-align: center;
