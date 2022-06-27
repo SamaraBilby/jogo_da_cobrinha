@@ -24,9 +24,14 @@ function criarBG() {
 
 function criarSnake() {
     for(let i = 0; i < snake.length; i++){
-        context.fillStyle = "black";
+        context.strokeStyle = "white";
+        context.fillStyle = "#000000";
+        context.beginPath();
+        context.lineWidth = 5;
+        context.strokeRect(snake[i].x, snake[i].y, box, box);
         context.fillRect(snake[i].x, snake[i].y, box, box);
-        
+       
+        context.closePath()
     }
 }
 
@@ -45,11 +50,11 @@ function update (event) {
     if(event.keyCode == 38 && direcao != "down") direcao = "up";
     if(event.keyCode == 39 && direcao != "left") direcao = "right";
     if(event.keyCode == 40 && direcao != "up") direcao = "down";
-}
+
+    }
+
 
 function iniciarJogo(){
-
-    
 
     if(snake[0].x > 15 * box && direcao == "right") snake[0].x = 0;
     if(snake[0].x < 0 && direcao == "left") snake[0].x = 15 * box;
