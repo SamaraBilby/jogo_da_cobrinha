@@ -1,3 +1,4 @@
+let placar = document.querySelector('input');
 let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
 let box = 32;
@@ -13,6 +14,8 @@ let food = {
     x: Math.floor(Math.random() * 15 + 1) * box, 
     y: Math.floor(Math.random() * 15 + 1) * box
 };
+
+let meusPontos = 0;
 
 
 
@@ -53,6 +56,10 @@ function update (event) {
 
     }
 
+    function aumentaPlacar(pontosGanhos) {
+        placar.value = pontosGanhos;
+    }
+
 
 function iniciarJogo(){
 
@@ -65,12 +72,13 @@ function iniciarJogo(){
             if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
                 clearInterval(jogo);
                 alert("Game Over :(");
+
             }
         }
-    
     criarBG();
     criarSnake();
     criarFood();
+    
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -79,15 +87,20 @@ function iniciarJogo(){
     if(direcao == "left") snakeX -= box;
     if(direcao == "up") snakeY -= box;
     if(direcao == "down") snakeY += box;
+    
 
     if(snakeX != food.x || snakeY != food.y){
         snake.pop();
     }
     else {
+        meusPontos++;
+        aumentaPlacar(meusPontos);
         food.x = Math.floor(Math.random() * 15 + 1) * box; 
         food.y = Math.floor(Math.random() * 15 + 1) * box;
 
     };
+
+    
 
    
     let newHead= {

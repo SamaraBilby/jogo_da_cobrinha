@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 #container {
     width: 650px;
-    height: 600px;
+    height: 635px;
     margin: 0 auto;
     padding: 10px;
     text-align: left;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
     background-color: #9049AC;
     padding: 0.05rem;
+    font-family: "Titan One";
+    letter-spacing: 1rem;
+    font-size: 2rem;
 }
 
 #container h2{
@@ -16,14 +20,23 @@
     margin-top: 1rem;
 }
 
+#container h5.pontos{
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0.2rem;
+    padding-left: 0.5rem;
+}
+
 #divCanvas{
-    float: left;
+    
+    float: center;
     text-align: center;
     margin: 20px;
     
 }
 
 #snake{
+    align-items: center;
     background-color: #9049AC;
     margin: 0px;
     padding: 0px;
