@@ -1,10 +1,8 @@
-canvas = document.getElementById("canvas")
-        ctx = canvas.getContext("2d");
 
-    function principal() {
+(function () {
     // variaveis de controle
-    //let canvas;
-   // let ctx;
+    let canvas;
+    let ctx;
 
     // variaveis snake
 
@@ -16,16 +14,14 @@ canvas = document.getElementById("canvas")
 
     // variaveis square
 
-
+    
+    
     function main () {
-        //canvas = document.getElementById("canvas")
-       // ctx = canvas.getContext("2d");
+        canvas = document.getElementById("canvas")
+        ctx = canvas.getContext("2d"); 
         
         init();
-
-        
     }
-
 
     // configurações iniciais
     function init() {
@@ -51,6 +47,8 @@ canvas = document.getElementById("canvas")
         //desenha o objeto
         gameLoop()
     };
+
+   
    
     //função que seta valores iniciais
 
@@ -105,6 +103,7 @@ canvas = document.getElementById("canvas")
         return function (callback, element) {
             timeControl.apply(window, [callback, element]);
         };
-    });
-    main();    
-};
+
+    })();
+    main();
+})();
