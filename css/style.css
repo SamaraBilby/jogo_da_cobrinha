@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Titan+One&family=VT323&display=swap');
 #container {
-    width: 650px;
+    width: 100%;
     height: 635px;
     margin: 0 auto;
     padding: 10px;
@@ -8,9 +8,9 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
     background-color: #9049AC;
     padding: 0.05rem;
-    font-family: "Titan One";
+    font-family: "VT323";
     letter-spacing: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 #container h2{
@@ -18,9 +18,11 @@
     text-align: center;
     margin: 0;
     margin-top: 1rem;
+    
 }
 
-#container h5.pontos{
+
+#container span{
     font-size: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 0.2rem;
@@ -29,7 +31,26 @@
     margin-bottom: 0;
 }
 
-#container h5 input {
+span{
+    margin: 0 2rem;
+}
+span#restart{
+    float: right;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+}
+
+span#restart:hover{
+    border: 1px solid rgb(200,0,0);
+    box-shadow: 0px 0px 10px rgba(100,0,0,0.5);
+    color: rgb(200,0,0);
+}
+
+#container input {
     
     height: 0.5rem;
     width: 2.5rem;
@@ -37,21 +58,21 @@
     border-radius: 15%;
     
     padding: 0.5rem;
-    margin-left: 00.5rem;
+    
+    margin-bottom: 0rem;
     font-weight: bolder;
 }
 
 
 #divCanvas{
-
-    
-    float: center;
+    margin-top: 0.005rem;
     text-align: center;
     margin: 20px;
     
 }
 
 #snake{
+    
     align-items: center;
     background-color: #9049AC;
     margin: 0px;
