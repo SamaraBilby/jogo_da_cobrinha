@@ -59,7 +59,7 @@ let snake = (function(){
 
     function draw (){
         for (let i = 0; i < leng; i++){
-            ctx.strokeStyle = '#C24C82';
+            ctx.strokeStyle = 'black;
             ctx.fillStyle = i == leng - 1 ? "#CC0033" : "#000000";
             ctx.beginPath();
             ctx.lineWidth = 2;

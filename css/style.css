@@ -1,20 +1,31 @@
 #container {
     width: 650px;
-    height: 450px;
+    height: 600px;
     margin: 0 auto;
     padding: 10px;
     text-align: left;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-    background-color: #C24C82;
+    background-color: #9049AC;
+    padding: 0.05rem;
 }
+
+#container h2{
+    color: white;
+    text-align: center;
+    margin: 0;
+    margin-top: 1rem;
+}
+
 #divCanvas{
     float: left;
     text-align: center;
     margin: 20px;
+    
 }
-#canvas{
+#snake{
     background-color: #9049AC;
     margin: 0px;
     padding: 0px;
     border: 5px solid #FFFFFF;
+    
 }
