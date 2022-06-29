@@ -78,14 +78,16 @@ function iniciarJogo(){
             }
         }
 
-        function configureBtn () {
+        /*function configureBtn () {
             btnRestart.onclick = function () {
-                iniciarJogo(); 
-                       
+                clearInterval(jogo);
+                iniciarJogo(jogo);
+                
+                                        
             };
-    
+            
         };
-        configureBtn ();
+        configureBtn ();*/
 
     criarBG();
     criarSnake();
